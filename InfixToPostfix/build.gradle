@@ -1,0 +1,21 @@
+
+apply plugin: 'application'
+
+mainClassName = 'Main'
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs = ['-Xlint:all']
+}
+
+run {
+    standardInput = System.in
+}
+
+task runLexer(dependsOn: compileJava, type: Exec){
+    commandLine 'java', '-cp' ,'build/classes/java/main/', 'lexer.Lexer', './src/main/resource/sample.txt'
+}
+
+task runParser(dependsOn: compileJava, type: Exec) {
+    commandLine 'java', '-cp', 'build/classes/java/main/', 'parser.Parser', './src/main/resource/sample.txt'
+}
