@@ -3,14 +3,20 @@
  */
 
 import java.io.*;
+import java.util.function.*;
+import java.util.Optional;
 
 public class App {
+
     public static void main(String[] args) throws IOException {
-        int x;
-        do {
-            x = System.in.read ();
-            System.out.println ("code: " + String.valueOf (x));
-            System.out.println ("char: " + String.valueOf ((char)x));
-        } while (x != -1);
+        App app = new App();
+        Supplier<Boolean> fun = app.test(20, 10);
+        System.out.println(fun.get());
+    }
+
+    public Supplier<Boolean> test(int x, int y) {
+        return () -> {
+            return (x <= 10 && y <= 10) ? true : false;
+        };
     }
 }
