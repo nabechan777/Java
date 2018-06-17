@@ -13,7 +13,7 @@ import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 import game.tic_tac_toe.TicTacToe;
 
-public class App extends Application{
+public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
 
@@ -41,7 +41,7 @@ public class App extends Application{
         primaryStage.show();
     }
 
-    public static void main(String... args) {
+    public static void main(String ... args) {
         Application.launch(args);
     }
 }

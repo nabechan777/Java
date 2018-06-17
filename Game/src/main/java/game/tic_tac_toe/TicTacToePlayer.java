@@ -21,12 +21,7 @@ public class TicTacToePlayer {
 
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer("TicTacToePlayer");
-        sb.append("{\n\t");
-        sb.append("name:\b" + getName() + ",\n\t");
-        sb.append("color:\b" + color + ",\n");
-        sb.append("}");
-        return sb.toString();
+        return getName() + this.color.toString();
     }
 
     public static void main() {

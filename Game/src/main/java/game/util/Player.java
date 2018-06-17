@@ -1,7 +1,7 @@
 package game.util;
 
 public class Player {
-    private String name;
+    protected String name;
 
     public Player(String name) {
         this.name = name;
@@ -12,7 +12,7 @@ public class Player {
     }
 
     @Override
-    public String getName() {
+    public String toString() {
         return this.name;
     }
 }

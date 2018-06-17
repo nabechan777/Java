@@ -39,3 +39,9 @@ repositories {
 run {
     standardInput = System.in
 }
+
+task runBoard(type:JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'game.tic_tac_toe.Board'
+
+}

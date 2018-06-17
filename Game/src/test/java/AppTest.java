@@ -11,8 +11,7 @@ public class AppTest {
     @Test
     public void testBoard (){
         Board target = new Board(3);
-        System.out.println(target.toString());
-        target.changeColor(1, 1, Color.BLACK);
-        System.out.println(target.toString());
+        target.changeColor(0, 0, Color.BLACK);
+        // assertEquals(false, target.whetherWin(0, 0, Color.BLACK));
     }
 }
