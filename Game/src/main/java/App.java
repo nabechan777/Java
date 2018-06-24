@@ -21,6 +21,9 @@ public class App extends Application {
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         EventHandler<MouseEvent> handler = (MouseEvent e) -> {
+            int pointX = e.getX();
+            int pointY = e.getY();
+
             System.out.println(String.valueOf(e.getX()) + String.valueOf(e.getY()));
         };
         canvas.addEventHandler(MouseEvent.MOUSE_PRESSED, handler);
@@ -43,5 +46,9 @@ public class App extends Application {
 
     public static void main(String ... args) {
         Application.launch(args);
+    }
+
+    private int pointToIndex(int x){
+        
     }
 }

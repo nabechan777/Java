@@ -66,7 +66,7 @@ public class TicTacToe {
     }
 
     // コンストラクタ
-    private TicTacToe(TicTacToePlayer p1, TicTacToePlayer p2){
+    public TicTacToe(TicTacToePlayer p1, TicTacToePlayer p2){
         this.player1 = p1;
         this.player2 = p2;
         this.turnPlayer = this.player1;
@@ -110,7 +110,7 @@ public class TicTacToe {
      * @param y      駒の縦方向の位置
      * @param player 駒をおくプレイヤー
      */
-    private void putStone(int x, int y, TicTacToePlayer player) {
+    public void putStone(int x, int y, TicTacToePlayer player) {
         this.board.changeColor(x, y, player.ofColor());
     }
 
@@ -122,7 +122,7 @@ public class TicTacToe {
      * @param  player 駒を置いたプレイヤー
      * @return        引数のプレイヤーが勝利していればtrue、そうでなければfalse
      */
-    private boolean whetherWin(int x, int y, TicTacToePlayer player){
+    public boolean whetherWin(int x, int y, TicTacToePlayer player){
         return this.board.whetherWin(x, y, player.ofColor());
     }
 

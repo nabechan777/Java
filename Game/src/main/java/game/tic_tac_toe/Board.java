@@ -9,8 +9,19 @@ import game.tic_tac_toe.Mass;
  *
  */
 public class Board {
+    /**
+     * ボードの横幅
+     */
     private int width;
+
+    /**
+     * ボードの高さ
+     */
     private int height;
+
+    /**
+     * 各マスのインスタンスの2次元配列
+     */
     private Mass[][] board;
 
 
@@ -128,6 +139,38 @@ public class Board {
     public void changeColor(int x, int y, Color color) {
         this.board[x][y].changeColor(color);
     }
+
+    /**
+     * GUIから入力を得る。
+     * @param x     x座標
+     * @param y     y座標
+     * @param color 入力した色
+     */
+    public void changeColorForGUI(int x, int y, Color color){
+        if ((0 <= x && x < 100) && (0 <= y && y < 100)) {
+            this.board[0][0].changeColor(color);
+        }else if ((100 <= x && x < 200) && (0 <= y && y < 100)) {
+            this.board[0][1].changeColor(color);
+        }else if ((200 <= x && x < 300) && (0 <= y && y < 100)) {
+            this.board[0][2].changeColor(color);
+        }else if ((0 <= x && x < 100) && (100 <= y && y < 200)) {
+            this.board[1][0].changeColor(color);
+        }else if ((100 <= x && x < 200) && (100 <= y && y < 200)) {
+            this.board[1][1].changeColor(color);
+        }else if((200 <= x && x < 300) && (100 <= y && y < 200)) {
+            this.board[1][2].changeColor(color);
+        }else if ((0 <= x && x < 100) && (200 <= y && y < 300)) {
+            this.board[2][0].changeColor(color);
+        }else if ((100 <= x && x < 200) && (200 <= y && y < 300)) {
+            this.board[2][1].changeColor(color);
+        }else if ((200 <= x && x < 300) && (200 <= y && y < 300)) {
+            this.board[2][2].changeColor(color);
+        }else {
+
+        }
+    }
+
+
 
     @Override
     public String toString(){
