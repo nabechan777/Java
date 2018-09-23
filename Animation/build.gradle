@@ -38,3 +38,8 @@ task runAnimation02(type: JavaExec){
     classpath = sourceSets.main.runtimeClasspath
     main = "Animation02"
 }
+
+task runAnimation03(type: JavaExec){
+    classpath = sourceSets.main.runtimeClasspath
+    main = "Animation03"
+}
